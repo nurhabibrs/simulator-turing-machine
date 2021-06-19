@@ -1,5 +1,4 @@
 from __future__ import annotations
-import time
 from collections import defaultdict
 from dataclasses import dataclass, field
 
@@ -50,33 +49,3 @@ class TuringMachine:
         print(' '.join(self.tape[i] for i in range(self.head - window, self.head + window + 1)), end='')
         print(f' ... state={self.current_state}')
         print(f'{" " * (2 * window + 4)}^')
-
-
-if __name__ == '__main__':
-    tm = TuringMachine(states={'a', 'b', 'c', 'H'},
-                       symbols={'0', '1'},
-                       blank_symbol='0',
-                       input_symbols={'1'},
-                       initial_state='a',
-                       accepting_states={'H'},
-                       transitions={
-                           ('a', '0'): ('b', '1', 1),
-                           ('a', '1'): ('c', '1', -1),
-                           ('b', '0'): ('a', '1', -1),
-                           ('b', '1'): ('b', '1', 1),
-                           ('c', '0'): ('b', '1', -1),
-                           ('c', '1'): ('H', '1', 1),
-                       })
-    tm.initialize({0: '1', 2: '1'})
-
-    while not tm.halted:
-        tm.print()
-        tm.step()
-        time.sleep(1)
-
-    print(tm.accepted_input())
-
-
-
-
-
