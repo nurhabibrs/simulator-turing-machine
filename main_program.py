@@ -125,6 +125,11 @@ def main():
             'Contoh: 4-3 --> 0000-000')
         inputSubs = input("Masukkan input: ")
         subtraction(inputSubs)
+    elif number == 3: 
+        print('Selamat datang di turing machine pilihan\nSilakan input jumlah bilangan bulat dengan angka 0\n'+
+            'Contoh: 4*3 --> 0000*000')
+        inputMult = input("Masukkan input: ")
+        multiplication(inputMult)
         
 if __name__ == '__main__':
     main()
