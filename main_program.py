@@ -112,7 +112,8 @@ def main():
     print('Program Simulator Turing Machine')
     print('Pilih Menu:\n' +
         '1. Penjumlahan\n' + 
-        '2. Pengurangan')
+        '2. Pengurangan\n' + 
+        '3. Perkalian')
     number = input('Masukkan pilihan: ')
     number = int(number)
     if number == 1:
@@ -127,7 +128,7 @@ def main():
         subtraction(inputSubs)
     elif number == 3: 
         print('Selamat datang di turing machine pilihan\nSilakan input jumlah bilangan bulat dengan angka 0\n'+
-            'Contoh: 4*3 --> 0000*000')
+            'Contoh: 4*3 --> 0000*000#')
         inputMult = input("Masukkan input: ")
         multiplication(inputMult)
         
