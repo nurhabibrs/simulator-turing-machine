@@ -42,7 +42,7 @@ class TuringMachine:
             raise RuntimeError('Machine still running')
         return self.current_state in self.accepting_states
 
-    def print(self, window=10):
+    def print(self, window=15):
         print('... ', end='')
         print(' '.join(self.tape[i] for i in range(self.head - window, self.head + window + 1)), end='')
         print(f' ... state={self.current_state}')
