@@ -1,0 +1,12 @@
+#!/bin/sh
+'''exec' "/media/Asus/EC36B22736B1F2A6/New folder/simulator-turing-machine/tm-env/bin/python3" "$0" "$@"
+' '''
+# -*- coding: utf-8 -*-
+import re
+import sys
+
+from setuptools.command.easy_install import main
+
+if __name__ == '__main__':
+    sys.argv[0] = re.sub(r'(-script\.pyw?|\.exe)?$', '', sys.argv[0])
+    sys.exit(main())
